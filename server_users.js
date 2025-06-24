@@ -20,7 +20,7 @@ const conn = mysql.createConnection({
 // Nodemailer transporter
 const transportobj = nodemailer.createTransport({
     service: 'gmail',
-    auth: { user: 'mulukuntlaharsha123@gmail.com', pass: 'kppw qpnh fkby npyn' }
+    auth: { user: '123@gmail.com', pass: 'kppw qpnh fkby' }
 });
 
 // Register API
@@ -39,7 +39,7 @@ app.post("/register", async (req, res) => {
             }
 
             const option = {
-                from: "mulukuntlaharsha123@gmail.com",
+                from: "123@gmail.com",
                 to: `${email}`,
                 subject: "Registration Successful",
                 text: `Hey ${name}, your registration for the ticketing app is successful. Enjoy our services!`
@@ -83,7 +83,7 @@ app.post("/login", (req, res) => {
                     console.log('Login success');
 
                     const option = {
-                        from: "mulukuntlaharsha123@gmail.com",
+                        from: "123@gmail.com",
                         to: `${email}`,
                         subject: "Login Detected",
                         text: `Hey ${user.name}, a new login was detected into your ticketing account.`
@@ -143,7 +143,7 @@ app.post("/bookings", (req, res) => {
         `;
 
         const mailOptions = {
-            from: "mulukuntlaharsha123@gmail.com",
+            from: "123@gmail.com",
             to: `${email}`,
             subject: "Ticket Booking Confirmation",
             text: `Hey ${name}, your ticket has been successfully booked!\n\n${bookingDetails}\n\nEnjoy your show!`
